@@ -18,6 +18,10 @@
 		<jar destfile="dist/h2-contrib-fn-v${build.number}.jar">
 			<fileset dir="./bin/" includes="org/h2/contrib/**"/>
 		</jar>
+		<jar destfile="h2-contrib-fn-v${build.number}.DIST.zip">
+			<fileset file="dist/h2-contrib-fn-v${build.number}.jar" />
+			<fileset file="install.sql" />
+		</jar>
 	</target>
 	
 </project>
