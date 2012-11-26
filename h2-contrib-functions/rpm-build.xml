@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="h2-contrib-fn">
+	<buildnumber/>
+	<tstamp>
+	    <format property="tstamp.build" pattern="yyyyMMdd"/>
+	</tstamp>
+    <property environment="env"/>
+	
+    <target name="clean">
+		
+    </target>
+
+	<target depends="clean" name="cleanall"/>
+    
+	<target depends="cleanall,rpm-all" name="build"/>
+
+	<target name="rpm-all">
+		<jar destfile="dist/h2-contrib-fn-v${build.number}.jar">
+			<fileset dir="./bin/" includes="org/h2/contrib/**"/>
+		</jar>
+	</target>
+	
+</project>
